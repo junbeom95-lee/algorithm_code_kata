@@ -10,9 +10,14 @@ public class CodeKata010 {  //배열의 평균값
     }
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
-        int n = scanner.nextInt();
-        int[] numbers = new int[n];
-        for (int i = 0; i < n; i++) numbers[i] = scanner.nextInt();
+        String line = scanner.nextLine();
+
+        String[] tokens = line.split(" ");
+        int[] numbers = new int[tokens.length];
+        for (int i = 0; i < tokens.length; i++) {
+            numbers[i] = Integer.parseInt(tokens[i]);
+        }
+
         scanner.close();
         CodeKata010 solution = new CodeKata010();
         double answer = solution.solution(numbers);
