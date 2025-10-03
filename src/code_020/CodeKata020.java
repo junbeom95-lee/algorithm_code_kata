@@ -6,10 +6,11 @@ public class CodeKata020 {  //정수 내림차순으로 배치하기
 
     public long solution(long n) {
         long answer = 0;
-        String s = String.valueOf(n);
-        char[] c = s.toCharArray();
-        Arrays.sort(c);
+        String s = String.valueOf(n);   //정수 -> 문자열
+        char[] c = s.toCharArray();     //문자열 -> 배열
+        Arrays.sort(c);                 //오름차순 정렬
 
+        //문자열 뒤집기
         StringBuilder sb = new StringBuilder(new String(c));
         sb.reverse();
 
