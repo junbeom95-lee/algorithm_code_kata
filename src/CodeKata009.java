@@ -1,5 +1,5 @@
 import java.util.Scanner;
-public class CodeKata009 {
+public class CodeKata009 {  //짝수의 합
     public int solution(int n) {
         int answer = 0;
         for(int i = 2; i <= n; i=i+2) answer += i;
