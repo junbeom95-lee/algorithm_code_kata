@@ -1,3 +1,5 @@
+package code_000;
+
 import java.util.Scanner;
 public class CodeKata003 {  //몫 구하기
     class Solution {

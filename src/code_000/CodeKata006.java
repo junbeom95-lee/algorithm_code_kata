@@ -1,9 +1,10 @@
+package code_000;
+
 import java.util.Scanner;
-public class CodeKata005 {  //숫자 비교하기
+public class CodeKata006 {  //두 수의 합 구하기
     public int solution(int num1, int num2) {
         int answer = 0;
-        if(num1 == num2) answer = 1;
-        else answer = -1;
+        answer = num1 + num2;
         return answer;
     }
     public static void main(String[] args) {
@@ -11,7 +12,7 @@ public class CodeKata005 {  //숫자 비교하기
         int num1 = scanner.nextInt();
         int num2 = scanner.nextInt();
         scanner.close();
-        CodeKata005 solution = new CodeKata005();
+        CodeKata006 solution = new CodeKata006();
         int answer = solution.solution(num1, num2);
         System.out.println(answer);
     }

@@ -1,3 +1,5 @@
+package code_000;
+
 import java.util.Scanner;
 public class CodeKata009 {  //짝수의 합
     public int solution(int n) {

@@ -1,3 +1,5 @@
+package code_000;
+
 import java.util.Scanner;
 
 public class CodeKata008 {  //각도기

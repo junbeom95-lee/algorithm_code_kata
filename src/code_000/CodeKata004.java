@@ -1,3 +1,5 @@
+package code_000;
+
 import java.util.Scanner;
 public class CodeKata004 {  //나이 출력
     public int solution(int age) {

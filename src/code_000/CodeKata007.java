@@ -1,3 +1,5 @@
+package code_000;
+
 import java.util.Scanner;
 public class CodeKata007 {  //두 수의 나눗셈
     public int solution(int num1, int num2) {

@@ -1,3 +1,5 @@
+package code_000;
+
 import java.util.Scanner;
 
 public class CodeKata002 { //두 수의 곱

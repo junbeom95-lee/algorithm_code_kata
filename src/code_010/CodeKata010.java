@@ -1,3 +1,5 @@
+package code_010;
+
 import java.util.Scanner;
 public class CodeKata010 {  //배열의 평균값
     public double solution(int[] numbers) {
