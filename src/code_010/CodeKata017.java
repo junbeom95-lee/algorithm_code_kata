@@ -20,8 +20,8 @@ public class CodeKata017 {  //자연수 뒤집어 배열로 만들기
         scanner.close();
         CodeKata017 solution = new CodeKata017();
         int[] answer = solution.solution(n);
-        for (int i = 0; i < answer.length; i++) {
-            System.out.println(answer[i]);
+        for (int j : answer) {
+            System.out.println(j);
         }
     }
 }

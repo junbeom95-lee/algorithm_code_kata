@@ -17,8 +17,8 @@ public class CodeKata016 {  //x만큼 간격이 있는 n개의 숫자
         scanner.close();
         CodeKata016 solution = new CodeKata016();
         long[] answer = solution.solution(x, n);
-        for(int i = 0 ; i < answer.length ; i++) {
-            System.out.println(answer[i]);
+        for (long l : answer) {
+            System.out.println(l);
         }
     }
 }
