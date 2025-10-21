@@ -1,7 +1,6 @@
 package code_030;
 
 import java.util.Arrays;
-import java.util.Collections;
 
 public class CodeKata034 {  //문자열 내림차순으로 배치하기
     public String solution(String s) {
