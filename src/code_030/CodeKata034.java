@@ -1,6 +1,7 @@
 package code_030;
 
 import java.util.Arrays;
+import java.util.Collections;
 
 public class CodeKata034 {  //문자열 내림차순으로 배치하기
     public String solution(String s) {
@@ -8,6 +9,7 @@ public class CodeKata034 {  //문자열 내림차순으로 배치하기
         char[] arr = s.toCharArray();
         Arrays.sort(arr);   //내림차순 정렬
         answer = new StringBuilder(new String(arr)).reverse().toString();   //역순
+        Arrays.sort(arr);
         return answer;
     }
 
