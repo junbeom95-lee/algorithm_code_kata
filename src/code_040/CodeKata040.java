@@ -1,6 +1,6 @@
 package code_040;
 
-public class CodeKata040 {  //
+public class CodeKata040 {  //3진법 뒤집기
 
     public int solution(int n) {
         int answer = 0;
