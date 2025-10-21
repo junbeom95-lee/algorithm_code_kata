@@ -12,6 +12,6 @@ public class CodeKata039 {  //최대공약수와 최소공배수
         return gcd(b, a % b);
     }
     public int lcm(int a, int b) {
-        return Math.abs(a * b) / gcd(a, b);
+        return (a * b) / gcd(a, b);
     }
 }
