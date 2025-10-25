@@ -48,6 +48,6 @@ public class CodeKata048 { //두 개 뽑아서 더하기
         CodeKata048 c = new CodeKata048();
         int[] numbers = {2, 1, 3, 4, 1};
         int[] result = c.solution(numbers);
-        System.out.println("result = " + result.toString());
+        System.out.println("result = " + Arrays.toString(result));
     }
 }
