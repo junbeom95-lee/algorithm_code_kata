@@ -1,36 +1,53 @@
 package code_040;
 
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.Collections;
-import java.util.List;
 
-public class CodeKata049 {  //K번째 수
-    public int[] solution(int[] array, int[][] commands) {
-        int[] answer = {};
-        List<Integer> midAnswer = new ArrayList<>();
+import java.util.*;
 
-        for(int i = 0; i < commands.length; i++) {
-            List<Integer> list = new ArrayList<>();
-            int x = commands[i][0];
-            int y = commands[i][1];
-            int z = commands[i][2];
-            for(int j = x - 1; j < y; j++) {
-                list.add(array[j]);
+public class CodeKata049 { //두 개 뽑아서 더하기
+    public int[] solution(int[] numbers) {
+
+        List<Integer> list = new ArrayList<>();
+
+        Arrays.sort(numbers);
+
+        for(int i = 0; i < numbers.length - 1; i++) {
+            for(int j = i + 1; j < numbers.length; j++) {
+                int x = numbers[i] + numbers[j];
+                boolean exist = list.stream()
+                        .anyMatch(a -> a == x);
+                if(!exist) list.add(x);
             }
-            Collections.sort(list);
-            midAnswer.add(list.get(z - 1));
         }
-        answer = midAnswer.stream().mapToInt(Integer::intValue).toArray();
+        int[] answer = list.stream().mapToInt(Integer::intValue).toArray();
+        return answer;
+    }
+    public int[] s(int[] numbers) {
+
+        int[] answer = {};
+        Set<Integer> set = new HashSet<>();
+
+        Arrays.sort(numbers);
+
+        for(int i = 0; i < numbers.length - 1; i++) {
+            for(int j = i + 1; j < numbers.length; j++) {
+                int x = numbers[i] + numbers[j];
+                if(!set.contains(x)) set.add(x);
+            }
+        }
+
+        answer = set.stream().mapToInt(x -> x.intValue()).toArray();
+
+        Arrays.sort(answer);
+
         return answer;
     }
 
+
+
     public static void main(String[] args) {
         CodeKata049 c = new CodeKata049();
-        int[] a = new int[]{1, 5, 2, 6, 3, 7, 4};
-        int[][] b = new int[][]{{2, 5, 3}, {4, 4, 1, }, {1, 7, 3}};
-        int[] result = c.solution(a, b);
-
+        int[] numbers = {2, 1, 3, 4, 1};
+        int[] result = c.solution(numbers);
         System.out.println("result = " + Arrays.toString(result));
     }
 }
